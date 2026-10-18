@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>PimTintas.Api</RootNamespace>
+		<NoWarn>$(NoWarn);NU1902</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.13" />
+		<!-- Hash de senha -->
+		<PackageReference Include="BCrypt.Net-Next" Version="4.*" />
+		<!-- Login com token JWT -->
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.*" />
+		<!-- Documentação da API (OpenAPI + Scalar) -->
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.*" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.13" />
+		<PackageReference Include="Scalar.AspNetCore" Version="2.*" />
+		<!-- Banco de dados SQL Server -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.*" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<!-- Add-Migration / Update-Database no Console do Gerenciador de Pacotes do Visual Studio -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>
